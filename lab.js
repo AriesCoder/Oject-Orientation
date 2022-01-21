@@ -5,7 +5,7 @@
 */
 
 //Code here
-
+const me = {name: "Trang", age: "30"}
 
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
@@ -17,20 +17,20 @@
 
 //Code here
 
-
+const dog = {name: "Ritz", color: "White", age: "3", goodGirl: true}
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
+console.log(dog.name)
 
-
-
+//console.log(dog['name'])
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,23 +40,30 @@
 */
 
 //Code here
-
+const favoriteThings = {band: "ABC", food: "durian", person: "KTH", book: "DVC", movie: "HV", holiday: "Spring"}
 
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
+  After you've made your object, 
+  use bracket or dot notation to add another key named 'car' with the value being your favorite car and 
+  then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+favoriteThings.car = "Tesla"
+favoriteThings.show = "VNShows"
 
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
+  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. 
+  (If they were either of those things already, change them to something else.)
 */
 
 //Code here
 
-
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
+//console.log(favoriteThings)
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
 // Do not edit the code below.
@@ -74,7 +81,12 @@ var carDetails = {
 
 //Code Here
 
+const {color: carColor} = carDetails
+const {make: carMake} = carDetails
+const {model: carModel} = carDetails
+const {year: carYear} = carDetails
 
+//console.log(`I like the car's color ${carColor}, make ${carMake}, model ${carModel}, and year ${carYear}`)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -83,15 +95,16 @@ var carDetails = {
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
-
+const ob = { title: "Ms", firstName: "Trang", lastName: "Lam"}
 function greeting( obj ) {
   //Code Here
-  
+  let {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
+console.log(greeting(ob))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -105,8 +118,14 @@ function greeting( obj ) {
 */
 
 //Code Here
+const stateObj = {Utah: 2, Cali: 5, Texas: 4, Arizona: 7}
 
+function totalPopulation(obj){
+    let {Utah, Cali, Texas, Arizona } = obj
+    return Utah + Cali + Texas + Arizona
+}
 
+console.log(totalPopulation(stateObj))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -119,8 +138,14 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+//const obj = {carb: "25", fat: "23", protein: "4"}
+let arr = []
+function ingredients(obj, array){
+  let {carb, fat, protein} = obj
+  array.push(carb, fat, protein)
+  return array
+}
+console.log(ingredients(obj, arr))
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
